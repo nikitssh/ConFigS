@@ -6,10 +6,11 @@ Si tienes problemas con la instalación de GRUB y Windows Boot EFI juntos en la 
 
 ### 1. Crear script ejecutable para arrancar Windows automáticamente
 
-Primero creamos el script en una ubicación. La recomendable sería *`/usr/local/bin`*, y añadimos la configuración
+Primero creamos el script en una ubicación. La recomendable sería *`/usr/local/bin`*, y añadimos la configuración.
 
 ```bash
 nano /usr/local/bin/windows
+
 
 #!/bin/bash
 
@@ -68,6 +69,7 @@ Crearemos el archivo y añadimos la siguiente configuración
 
 ```bash
 nano /etc/grub.d/06_windows_once
+
 
 #!/bin/sh
 

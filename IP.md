@@ -43,6 +43,9 @@ El archivo que tendríamos que editar para configurar las interfaces sería **`/
 ### 2.1 Para poner una interfaz en modo DHCP
 
 ```bash
+sudo nano /etc/network/interfaces
+
+
 auto enp0s3
 
 iface enp0s3 inet dhcp
@@ -51,6 +54,9 @@ iface enp0s3 inet dhcp
 ### 2.2 Para configurar una interfaz con IP estática
 
 ```bash
+sudo nano /etc/network/interfaces
+
+
 auto enp0s3
 
 iface enp0s3 inet static

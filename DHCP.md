@@ -12,10 +12,11 @@ sudo apt install isc-dhcp-server
 
 ### 1. Indicar la interfaz donde funcionará el servidor DHCP
 
-Primero vamos a indicar la interfaz de red en la que funcionará nuestro servicio DHCP. Para ello, editamos el archivo **`/etc/default/isc-dhcp-server`**
+Primero vamos a indicar la interfaz de red en la que funcionará nuestro servicio DHCP. Para ello, editamos el archivo **`/etc/default/isc-dhcp-server`**.
 
 ```bash
 sudo nano /etc/default/isc-dhcp-server
+
 
 INTERFACESv4="enp0s3"
 ```
@@ -26,10 +27,11 @@ INTERFACESv4="enp0s3"
 
 El siguiente paso será indicar el rango de IP, la máscara, la puerta de enlace, los servidores DNS y otra información del servicio DHCP.
 
-Para ello, editamos y añadir la siguiente configuración
+Para ello, editamos y añadir la siguiente configuración:
 
 ```bash
 sudo nano /etc/dhcp/dhcpd.conf
+
 
 default-lease-time 1200;
 
@@ -69,6 +71,7 @@ Volvemos a editar y añadimos:
 
 ```bash
 sudo nano /etc/dhcp/dhcpd.conf
+
 
 host cliente1 {
 
