@@ -111,6 +111,25 @@ Otra comprobación sería por ejemplo consultar la hora con el servicio **NTP** 
 ntpdate -q 0.pool.ntp.org
 ```
 
+Una opcion mas seria copiar un archivo de tu ordenador a otro ordenador mediamente SSH con eramienta SCP.
+
+* Copiar desde tu equipo a la maquina conectada:
+
+```bash
+scp -P 22 archivo.txt usuario@192.168.2.10:/ruta/destino/ #Un archivo
+
+scp -r -P 22 carpeta/ usuario@192.168.2.10:/ruta/destino/ #Una carpeta
+```
+
+* De la maquina conectada a tu equipo:
+
+```bash
+scp -P 22 usuario@IP:/ruta/remota/archivo . #Copia un archivo en la ruta actual donde te encuentras en tu PC
+
+scp -r -P 22 usuario@IP:/ruta/remota/carpeta/ /ruta/local/ #Copia la carpeta en tu ordenador /ruta/local/
+```
+
+
 Para ver el Log de paquetes descartados o aceptados ponemos estas reglas.
 
 ```bash
